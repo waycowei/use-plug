@@ -1,21 +1,20 @@
 {
-  "name": "pkg-name",
+  "name": "use-plug",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@7.0.0",
   "description": "",
   "keywords": [],
-  "homepage": "https://github.com/antfu/pkg-name#readme",
+  "homepage": "https://github.com/waycowei/use-plug#readme",
   "bugs": {
-    "url": "https://github.com/antfu/pkg-name/issues"
+    "url": "https://github.com/waycowei/use-plug/issues"
   },
   "license": "MIT",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "author": "Wayco Wei <waycowei@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antfu/pkg-name.git"
+    "url": "git+https://github.com/waycowei/use-plug.git"
   },
-  "funding": "https://github.com/sponsors/antfu",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
