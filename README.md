@@ -4,6 +4,12 @@ a vue-like plugin system
 
 [![NPM version](https://img.shields.io/npm/v/use-plug?color=a1b858&label=)](https://www.npmjs.com/package/use-plug)
 
+## Install
+
+```bash
+npm install --save use-plug
+```
+
 ## Useage
 
 ```ts
@@ -18,7 +24,6 @@ const ins = createUse(new axios.create())
 
 export default ins
 ```
-
 
 ## License
 
