@@ -20,12 +20,15 @@ interface PlugHost<Host> {
   [x: string]: any
 }
 
-function createUse<Host>(host: Host, useOptions?: UseOptions): PlugInstance<Host>
-function createUse<Host>(host: Host & PlugHost<Host>, useOptions?: UseOptions) {
+export function createUse<Host>(host: Host, useOptions?: UseOptions): PlugInstance<Host>
+export function createUse<Host>(host: Host & PlugHost<Host>, useOptions?: UseOptions) {
   const { __DEV__ } = useOptions ?? {}
-  const installedPlugins = host._installedPlugin ?? []
+  if (host?.use)
+    return host
+
   // https://github.com/vuejs/core/blob/main/packages/runtime-core/src/apiCreateApp.ts#L218
   host.use = function (plugin: Plugin<Host>, ...options: any[]) {
+    const installedPlugins = host._installedPlugin ?? new Set()
     if (installedPlugins.has(plugin)) {
       __DEV__ && warn('Plugin has already been applied.')
     }
@@ -44,8 +47,4 @@ function createUse<Host>(host: Host & PlugHost<Host>, useOptions?: UseOptions) {
     return host
   }
   return host
-}
-
-export default {
-  createUse,
 }
