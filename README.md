@@ -10,7 +10,7 @@ a vue-like plugin system
 npm install --save use-plug
 ```
 
-## Useage
+## Usage
 
 ```ts
 import { createUse } from 'use-plug/core'
